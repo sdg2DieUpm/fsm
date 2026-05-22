@@ -12,6 +12,10 @@
 /* Standard C includes */
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* Typedefs --------------------------------------------------------------------*/
 
 /**
@@ -102,5 +106,9 @@ void fsm_set_state(fsm_t *p_fsm, int state);
  * @param p_fsm Pointer to the memory address where the new state machine is located
  */
 void fsm_fire(fsm_t *p_fsm);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* FSM_H_ */
